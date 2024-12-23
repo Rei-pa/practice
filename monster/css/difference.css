@@ -1,0 +1,955 @@
+.circle{
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    border: 2px dashed #823c2d;
+    background-color: #fefff9;
+    font-family: GenJyuuGothic-Regular;
+    font-size: 56px;
+    line-height:1.8;
+  }
+
+.circle_word{
+    font-size: 26px;
+    margin: 10px 0px;
+  }
+
+
+/*共通動畫效果*/
+.movefromLeft,.movefromRight,.movefromTop,.movefrombottom,.appear,.DD{
+ visibility: hidden;
+}
+
+.fadeIn{
+  animation: fadeIn 3s 1;
+  visibility: visible;
+}
+
+.fadeInLeft{
+  animation: fadeInLeft 1.5s ease 1;
+  visibility: visible;
+}
+
+.fadeInRight{
+  animation: fadeInRight 1.5s ease 1;
+  visibility: visible;
+}
+
+.fadeInDown{
+  animation: fadeInDown 1.5s ease 1;
+  visibility: visible;
+}
+
+.fadeInUp{
+  animation: fadeInUp 1.5s ease 1;
+  visibility: visible;
+}
+
+.rubberBand{
+  animation: rubberBand 1.5s 1;
+  visibility: visible;
+}
+
+
+
+
+
+/*課程雙子島*/
+.home_bg4{
+  margin-bottom: 400px;
+}
+
+.monster-talk{
+  text-align: center;
+  background-color: rgba(255,255,255,.8);
+  border-radius: 10px;
+}
+
+.monster-talk:before{
+    content: '';
+    border-top: 15px solid rgba(255,255,255,.8);
+    border-bottom: 15px solid transparent;
+    border-right: 15px solid transparent;
+    border-left: 15px solid transparent;
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.monster-talk_left{
+  top:-7%;
+  left: 30%;
+}
+
+.monster-talk_right{
+  top:-6%;
+  left:28%;
+}
+
+.container__class {
+  top:26%;
+}
+
+.island_green_left{
+  transform-origin:90px 100px;
+  animation:monster_wave 1.5s linear infinite;
+}
+
+.island_green_right{
+  transform-origin:80px 180px;
+  animation:monster_wave 2s linear infinite;
+}
+
+@keyframes monster_wave{
+  0%{transform: rotate(0deg);}
+  20%{transform: rotate(20deg);}
+  50%{transform: rotate(0deg);}
+  80%{transform: rotate(-20deg);}
+  100%{transform: rotate(0deg);}
+}
+
+
+@media screen and (max-width:767px){
+  #arrowLeft{
+    position: relative;
+    left: 0%;
+    top: 0%;
+  }
+
+  #arrowRight{
+    position: relative;
+    right: 0%;
+    top: 0%;
+  }
+}
+
+
+
+
+.move_left{
+  animation:move_left 2s ease 1s forwards;
+}
+@keyframes move_left {
+  0% {
+  opacity: 1;
+  transform: scale(1) translate3d(-10%, 0, 0);
+  }
+  50% {
+  opacity: 1;
+  transform: scale(.7) translate3d(-20%, 0, 0);
+  }
+  100% {
+  opacity: 1;
+  transform: scale(.7) translate3d(-30%, 0, 0);
+  }
+}
+
+
+.move_right{
+  animation:move_right 2s ease 1s forwards;
+}
+@keyframes move_right {
+  0% {
+  opacity: 1;
+  transform: scale(1) translate3d(10%, 0, 0);
+  }
+  50% {
+  opacity: 1;
+  transform: scale(.7) translate3d(20%, 0, 0);
+  }
+  100% {
+  opacity: 1;
+  transform: scale(.7) translate3d(30%, 0, 0);
+  }
+}
+
+
+.scale_stop{
+  animation:scale_stop 2s ease 1s forwards;
+}
+  @keyframes scale_stop {
+    0% {
+    opacity: 1;
+    transform: scale(1)
+    }
+    50% {
+    opacity: 1;
+    transform: scale(1.42857)
+    }
+    100% {
+    opacity: 1;
+    transform: scale(1.42857)
+  }
+}
+
+
+.class_apear{
+  animation:class_apear 2s ease 1s backwards;
+}
+  @keyframes class_apear {
+    0% {
+    opacity: 0;
+    transform:translate3d(0,50%, 0);
+    }
+
+    100% {
+    opacity: 1;
+    transform:translate3d(0,0,0);
+    }
+  }
+
+
+/*下雪特效*/
+.snow {
+  width: 100vw;
+  height: 100vh;
+}
+
+.snow__item {
+  position: absolute;
+  width: 5px;
+  height: 5px;
+  margin: auto;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  border-radius: 50%;
+  -webkit-animation: snow 10000ms linear infinite;
+          animation: snow 10000ms linear infinite;
+}
+.snow__item:nth-child(2) {
+  left: 25vw;
+  -webkit-animation-delay: 6666ms;
+          animation-delay: 6666ms;
+}
+.snow__item:nth-child(3) {
+  right: 25vw;
+  -webkit-animation-delay: 3333ms;
+          animation-delay: 3333ms;
+}
+
+@keyframes snow {
+  0% {
+    box-shadow: 0 0 0 transparent, 63vw -101vh 6px 5px #fff, -24vw -56vh 2px 3px #fff, 49vw -69vh 1px 5px #fff, -40vw -92vh 4px 5px #fff, 14vw -65vh 8px 3px #fff, -55vw -60vh 6px 5px #fff, 22vw -57vh 3px 2px #fff, -25vw -123vh 6px 1px #fff, 58vw -126vh 4px 4px #fff, -53vw -97vh 4px 4px #fff, 38vw -74vh 7px 1px #fff, -5vw -103vh 6px 1px #fff, 26vw -64vh 7px 2px #fff, -43vw -64vh 7px 1px #fff, 39vw -122vh 5px 5px #fff, -73vw -67vh 8px 5px #fff, 91vw -101vh 4px 3px #fff, -2vw -114vh 1px 5px #fff, 50vw -76vh 7px 3px #fff, -11vw -98vh 5px 1px #fff, 39vw -108vh 2px 3px #fff, -55vw -141vh 8px 4px #fff, 3vw -131vh 1px 3px #fff, -46vw -148vh 4px 5px #fff, 1vw -139vh 2px 5px #fff, -46vw -98vh 8px 4px #fff, 49vw -64vh 4px 2px #fff, -54vw -82vh 8px 5px #fff, 17vw -68vh 6px 5px #fff, -83vw -56vh 4px 4px #fff, 19vw -141vh 4px 4px #fff, -16vw -128vh 2px 3px #fff, 42vw -59vh 1px 1px #fff, -82vw -143vh 7px 2px #fff, 89vw -86vh 8px 3px #fff, -72vw -148vh 2px 3px #fff, 86vw -116vh 5px 4px #fff, -45vw -77vh 7px 2px #fff, 71vw -131vh 3px 4px #fff, -65vw -65vh 7px 1px #fff, 1vw -60vh 3px 3px #fff, -71vw -109vh 3px 1px #fff, 21vw -109vh 8px 4px #fff, -61vw -135vh 3px 4px #fff, 73vw -133vh 8px 4px #fff, -24vw -130vh 7px 3px #fff, 58vw -54vh 1px 3px #fff, -43vw -144vh 2px 2px #fff, 87vw -67vh 5px 1px #fff, -57vw -135vh 1px 2px #fff, 75vw -52vh 1px 4px #fff, -62vw -116vh 8px 5px #fff, 98vw -119vh 5px 5px #fff, -94vw -106vh 4px 4px #fff, 94vw -117vh 4px 1px #fff, -22vw -142vh 3px 4px #fff, 85vw -66vh 8px 2px #fff, -51vw -128vh 4px 4px #fff, 75vw -57vh 6px 1px #fff, -61vw -79vh 4px 1px #fff, 46vw -54vh 5px 4px #fff, -62vw -128vh 3px 3px #fff, 89vw -134vh 7px 5px #fff, -5vw -144vh 2px 5px #fff, 60vw -88vh 4px 4px #fff, -99vw -75vh 5px 2px #fff, 23vw -110vh 4px 1px #fff, -96vw -126vh 1px 2px #fff, 14vw -129vh 8px 3px #fff, -80vw -71vh 8px 4px #fff, 94vw -58vh 4px 2px #fff, -13vw -121vh 6px 3px #fff, 44vw -54vh 3px 3px #fff, -33vw -148vh 4px 2px #fff, 18vw -88vh 1px 1px #fff, -10vw -137vh 6px 2px #fff, 53vw -61vh 5px 4px #fff, -41vw -110vh 8px 3px #fff, 27vw -65vh 5px 4px #fff, -87vw -50vh 3px 2px #fff, 69vw -123vh 6px 4px #fff, -67vw -140vh 8px 1px #fff, 60vw -143vh 8px 4px #fff, -23vw -124vh 8px 2px #fff, 32vw -89vh 8px 4px #fff, -91vw -66vh 2px 3px #fff, 66vw -96vh 3px 4px #fff, -16vw -93vh 2px 3px #fff, 15vw -52vh 7px 1px #fff, -57vw -129vh 5px 2px #fff, 60vw -129vh 7px 5px #fff, -73vw -120vh 4px 3px #fff, 32vw -140vh 1px 5px #fff, -42vw -116vh 7px 5px #fff, 92vw -132vh 8px 5px #fff, -10vw -141vh 8px 4px #fff, 54vw -101vh 8px 4px #fff, -22vw -98vh 3px 2px #fff, 9vw -145vh 6px 3px #fff, -26vw -137vh 1px 1px #fff;
+  }
+  100% {
+    box-shadow: 0 0 0 transparent, 100vw 136vh 1px 4px #fff, -10vw 91vh 8px 2px #fff, 32vw 81vh 3px 5px #fff, -30vw 139vh 1px 4px #fff, 64vw 81vh 6px 1px #fff, -36vw 100vh 6px 5px #fff, 39vw 129vh 3px 4px #fff, -95vw 142vh 1px 2px #fff, 32vw 140vh 8px 4px #fff, -16vw 132vh 8px 1px #fff, 65vw 130vh 4px 1px #fff, -38vw 85vh 3px 4px #fff, 38vw 53vh 4px 3px #fff, -70vw 121vh 8px 5px #fff, 52vw 53vh 8px 2px #fff, -75vw 90vh 7px 4px #fff, 8vw 94vh 3px 5px #fff, -19vw 61vh 4px 1px #fff, 43vw 144vh 3px 3px #fff, -36vw 119vh 5px 3px #fff, 40vw 114vh 7px 4px #fff, -5vw 86vh 5px 1px #fff, 39vw 58vh 7px 4px #fff, -39vw 84vh 4px 2px #fff, 49vw 148vh 6px 1px #fff, -14vw 99vh 7px 4px #fff, 46vw 138vh 1px 4px #fff, -91vw 121vh 3px 4px #fff, 90vw 88vh 7px 5px #fff, -28vw 149vh 7px 4px #fff, 52vw 120vh 8px 5px #fff, -55vw 93vh 7px 4px #fff, 16vw 119vh 8px 4px #fff, -23vw 77vh 4px 1px #fff, 22vw 89vh 5px 3px #fff, -29vw 99vh 4px 3px #fff, 35vw 109vh 7px 2px #fff, -84vw 66vh 4px 1px #fff, 78vw 99vh 5px 2px #fff, -70vw 103vh 5px 1px #fff, 79vw 90vh 2px 3px #fff, -27vw 116vh 1px 1px #fff, 65vw 124vh 1px 4px #fff, -72vw 119vh 5px 4px #fff, 91vw 84vh 4px 2px #fff, -82vw 97vh 7px 1px #fff, 36vw 142vh 5px 3px #fff, -77vw 118vh 2px 4px #fff, 100vw 77vh 4px 2px #fff, -34vw 51vh 7px 5px #fff, 55vw 69vh 8px 3px #fff, -20vw 120vh 8px 3px #fff, 73vw 91vh 4px 5px #fff, -68vw 51vh 2px 2px #fff, 24vw 65vh 7px 4px #fff, -31vw 75vh 7px 5px #fff, 27vw 107vh 1px 3px #fff, -50vw 148vh 4px 5px #fff, 94vw 84vh 6px 3px #fff, -40vw 62vh 6px 2px #fff, 67vw 113vh 8px 2px #fff, -89vw 124vh 5px 2px #fff, 8vw 97vh 4px 2px #fff, -86vw 89vh 6px 5px #fff, 41vw 143vh 8px 3px #fff, -36vw 104vh 6px 2px #fff, 96vw 106vh 8px 2px #fff, -49vw 66vh 2px 3px #fff, 92vw 83vh 3px 5px #fff, -90vw 72vh 8px 5px #fff, 47vw 142vh 8px 2px #fff, -62vw 143vh 7px 4px #fff, 68vw 109vh 3px 3px #fff, -25vw 89vh 8px 3px #fff, 13vw 54vh 8px 1px #fff, -56vw 63vh 2px 4px #fff, 52vw 58vh 1px 4px #fff, -50vw 100vh 3px 4px #fff, 70vw 87vh 7px 1px #fff, -14vw 131vh 6px 5px #fff, 66vw 62vh 1px 3px #fff, -31vw 88vh 8px 4px #fff, 49vw 100vh 5px 5px #fff, -62vw 114vh 4px 5px #fff, 70vw 88vh 2px 4px #fff, -40vw 102vh 2px 2px #fff, 20vw 77vh 7px 5px #fff, -25vw 105vh 7px 5px #fff, 45vw 73vh 8px 2px #fff, -34vw 133vh 3px 3px #fff, 2vw 88vh 6px 1px #fff, -41vw 94vh 3px 4px #fff, 45vw 124vh 3px 5px #fff, -30vw 104vh 8px 5px #fff, 43vw 148vh 7px 3px #fff, -83vw 86vh 3px 3px #fff, 80vw 64vh 3px 4px #fff, -40vw 132vh 1px 2px #fff, 52vw 145vh 1px 5px #fff, -96vw 116vh 1px 1px #fff;
+  }
+}
+
+
+
+@media screen and (max-width:767px){
+  .home_bg4{
+    margin-bottom: 90px;
+  }
+
+   .circle{
+    width: 70px;
+    height: 70px;
+    line-height:70px;
+  }
+
+  .monster-talk{
+    display: none
+  }
+  
+  .container__class{
+    position: relative;
+  }
+
+  .home_bg4 .btn-main-lg, .home_bg5 .btn-main-lg, .home_bg6 .btn-main-lg{
+   position: relative;
+   margin: auto;
+   left: 0%;
+   top:5%;
+   margin-top: 10px;
+  }
+
+  @keyframes move_left {
+    0% {
+    opacity: 1;
+    transform: scale(1) translate3d(0%, 0, 0);
+    }
+    50% {
+    opacity: 1;
+    transform: scale(1) translate3d(0%, 0, 0);
+    }
+    100% {
+    opacity: 1;
+    transform: scale(1) translate3d(0%, 0, 0);
+    }
+  }
+
+
+  @keyframes move_right {
+    0% {
+    opacity: 1;
+    transform: scale(1) translate3d(0%, 0, 0);
+    }
+    50% {
+    opacity: 1;
+    transform: scale(1) translate3d(0%, 0, 0);
+    }
+    100% {
+    opacity: 1;
+    transform: scale(1) translate3d(0%, 0, 0);
+    }
+  }
+
+  @keyframes monster_wave{
+    0%{transform: rotate(0deg);}
+    20%{transform: rotate(5deg);}
+    50%{transform: rotate(0deg);}
+    80%{transform: rotate(-5deg);}
+    100%{transform: rotate(0deg);}
+  }
+
+}
+
+
+
+
+/*<!-- 遊戲冒險島 -->*/
+.home_bg5{
+    margin-bottom: 250px;
+  }
+.game_island{
+  margin: 200px 0px 10px;
+}
+
+.home_box5--item2 .index_title{
+  left: -10%;
+
+}
+
+.card-lg.card_game{
+  background-image: url(../img/index-img/card_monster_01.gif);
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  box-shadow:none;
+  filter: drop-shadow(1px 1px 2px rgba(0,0,0,.4));
+}
+
+.circle-line{
+	height: 100px;
+	border-radius: 50%;
+	border: 2px dashed #823c2d;
+}
+
+.circle-word{
+	font-family: GenJyuuGothic-Regular;
+	font-size: 56px; 
+}
+
+.home_bg5 h3{
+	margin-top: 0px;
+}
+
+
+.cloud_thunder1 .cloud1{
+  width: 210px;
+  height: 55px;
+  border-radius: 50px;
+  background-color: #888;
+  position: absolute;
+  top: 150px;
+  left: 150px;
+  animation: cloud_light 3s linear infinite;
+  
+}
+.cloud_thunder1 .cloud2{
+  width: 100px;
+  height: 100px;
+  border-radius: 100%;
+  background-color: #888;
+  position: absolute;
+  top: 100px;
+  left: 170px;
+  z-index: -10px;
+  animation: cloud_light 3s linear infinite;
+}
+.cloud_thunder1 .cloud3{
+  width: 75px;
+  height: 75px;
+  border-radius: 100%;
+  background-color: #888;
+  position: absolute;
+  top: 120px;
+  left: 260px;
+  z-index: -10px;
+  animation: cloud_light 3s linear infinite;
+}
+
+
+.cloud_thunder2 .cloud1{
+  width: 210px;
+  height: 55px;
+  border-radius: 50px;
+  background-color: #888;
+  position: absolute;
+  top: 150px;
+  left: 150px;
+  animation: cloud_light 2s linear infinite;
+  
+}
+.cloud_thunder2 .cloud2{
+  width: 100px;
+  height: 100px;
+  border-radius: 100%;
+  background-color: #888;
+  position: absolute;
+  top: 100px;
+  left: 240px;
+  z-index: -10px;
+  animation: cloud_light 2s linear infinite;
+}
+.cloud_thunder2 .cloud3{
+  width: 75px;
+  height: 75px;
+  border-radius: 100%;
+  background-color: #888;
+  position: absolute;
+  top: 120px;
+  left: 180px;
+  z-index: -10px;
+  animation: cloud_light 2s linear infinite;
+}
+
+.cloud_thunder3 .cloud1{
+  width: 210px;
+  height: 55px;
+  border-radius: 50px;
+  background-color: #888;
+  position: absolute;
+  top: 150px;
+  left: 150px;
+  animation: cloud_light 5s linear infinite;
+  
+}
+.cloud_thunder3 .cloud2{
+  width: 100px;
+  height: 100px;
+  border-radius: 100%;
+  background-color: #888;
+  position: absolute;
+  top: 100px;
+  left: 170px;
+  z-index: -10px;
+  animation: cloud_light 5s linear infinite;
+}
+.cloud_thunder3 .cloud3{
+  width: 75px;
+  height: 75px;
+  border-radius: 100%;
+  background-color: #888;
+  position: absolute;
+  top: 120px;
+  left: 260px;
+  z-index: -10px;
+  animation: cloud_light 5s linear infinite;
+}
+
+@keyframes cloud_light{
+  0%{
+    background-color: #888;
+  }
+  50%{
+    background-color: #666;
+  }
+  100%{
+    background-color: #888;
+  }
+
+}
+
+
+
+.rain li{
+  list-style: none;
+  height: 8px;
+  width: 4px;
+  border-radius: 100%;
+  background: #009999;
+  margin: 10px;
+  animation: move 2s linear infinite;
+}
+
+.rain li:nth-child(1){
+  position: relative;
+  top: 185px;
+  left: 170px;
+  z-index: -1;
+  animation-delay: 892ms;
+}
+
+.rain li:nth-child(2){
+  position: relative;
+  top: 165px;
+  left: 270px;
+  z-index: -1;
+  animation-delay: 542ms;
+}
+
+.rain li:nth-child(3){
+  position: relative;
+  top: 145px;
+  left: 290px;
+  z-index: -1;
+  animation-delay: 987ms;
+}
+
+.rain li:nth-child(4){
+  position: relative;
+  top: 115px;
+  left: 190px;
+  z-index: -1;
+  animation-delay: 1677ms;
+}
+
+.rain li:nth-child(4){
+  position: relative;
+  top: 125px;
+  left: 190px;
+  z-index: -1;
+  animation-delay: 1250ms;
+}
+
+.rain li:nth-child(4){
+  position: relative;
+  top:125px;
+  left: 230px;
+  z-index: -1;
+  animation-delay: 2789ms;
+}
+
+.rain li:nth-child(5){
+  position: relative;
+  top: 115px;
+  left: 200px;
+  z-index: -1;
+  animation-delay: 150ms;
+
+}
+.rain li:nth-child(6){
+  position: relative;
+  top: 115px;
+  left: 220px;
+  z-index: -1;
+  animation-delay: 786ms;
+
+}
+.rain li:nth-child(6){
+  position: relative;
+  top: 95px;
+  left: 240px;
+  z-index: -1;
+  animation-delay: 453ms;
+
+}
+.rain li:nth-child(7){
+  position: relative;
+  top: 5px;
+  left: 290px;
+  z-index: -1;
+  animation-delay: 550ms;
+
+}
+.rain li:nth-child(7){
+  position: relative;
+  top: 55px;
+  left: 150px;
+  z-index: -1;
+  animation-delay: 1359ms;
+
+}
+.rain li:nth-child(8){
+  position: relative;
+  top: 45px;
+  left: 270px;
+  z-index: -1;
+  animation-delay: 1950ms;
+
+}
+.rain li:nth-child(9){
+  position: relative;
+  top: 25px;
+  left: 224px;
+  z-index: -1;
+  animation-delay: 2350ms;
+
+}
+.rain li:nth-child(10){
+  position: relative;
+  top: 2px;
+  left: 314px;
+  z-index: -1;
+  animation-delay: 1750ms;
+
+}
+
+@keyframes move{
+  100%{
+    top: 255px;
+  }
+}
+
+.cloud_thunder1 .thunder-container{
+  position: absolute;
+  top: 210px;
+  left: 215px;
+}
+
+.cloud_thunder2 .thunder-container{
+  position: absolute;
+  top: 210px;
+  left: 250px;
+}
+
+.cloud_thunder3 .thunder-container{
+  position: absolute;
+  top: 210px;
+  left: 250px;
+}
+
+
+
+.cloud_thunder1 .thunder-container .thunder1{
+  
+  background-color: yellow;
+  width: 15px;
+  height: 30px;
+  position: relative;
+  left: 18px;
+  top: -5px;
+  transform: skew(-45deg);
+  animation: flash 3s linear infinite;
+}
+.cloud_thunder1 .thunder-container .thunder2{
+  
+  background-color: yellow;
+  width: 15px;
+  height: 40px;
+  position: relative;
+  top: -10px;
+  left: 2px;
+  transform: skew(-45deg);
+  animation: flash 3s linear infinite;
+}
+
+.cloud_thunder2 .thunder-container .thunder1{
+  
+  background-color: yellow;
+  width: 15px;
+  height: 30px;
+  position: relative;
+  left: 18px;
+  top: -5px;
+  transform: skew(-45deg);
+  animation: flash 2s linear infinite;
+}
+.cloud_thunder2 .thunder-container .thunder2{
+  
+  background-color: yellow;
+  width: 15px;
+  height: 40px;
+  position: relative;
+  top: -10px;
+  left: 2px;
+  transform: skew(-45deg);
+  animation: flash 2s linear infinite;
+}
+
+.cloud_thunder3 .thunder-container .thunder1{
+  
+  background-color: yellow;
+  width: 15px;
+  height: 30px;
+  position: relative;
+  left: 18px;
+  top: -5px;
+  transform: skew(-45deg);
+  animation: flash 5s linear infinite;
+}
+.cloud_thunder3 .thunder-container .thunder2{
+  
+  background-color: yellow;
+  width: 15px;
+  height: 40px;
+  position: relative;
+  top: -10px;
+  left: 2px;
+  transform: skew(-45deg);
+  animation: flash 5s linear infinite;
+}
+
+@keyframes flash{
+  0%{
+    background: none;
+    
+  }
+  25%{
+    background: none;
+    
+  }
+  50%{
+    background: none;
+  }
+  65%{
+    background: none;
+  }
+  75%{
+    background: none;
+  }
+  80%{
+    background: yellow;
+  }
+  100%{
+    background: none;
+  }
+}
+
+
+
+.island_blue{
+	animation:monster_shake 0.8s infinite;
+}
+
+.home_box6--item1{
+  margin-bottom: 20px;
+
+}
+
+
+@keyframes monster_shake{
+	0%{transform: translate(0px,0px);}
+	50%{transform: translate(0px,20px);}
+	100%{transform: translate(0px,0px);}
+}
+
+
+
+@media screen and (max-width:767px){
+  .home_bg5{
+      margin-bottom: 90px;
+    }
+
+  .index_title{
+    position: relative;
+  }
+
+  .home_box5--item2 .index_title{
+    left:0;
+  }
+
+  .home_box5--item3--talk{
+    display: none;
+  }
+
+  .game_island{
+    margin: 140px 0px 10px;
+  }
+
+
+  .cloud_thunder1{
+    left: 3%;
+    top: 3%;
+  }
+
+  .cloud_thunder2, .cloud_thunder3{
+    display: none;
+  }
+
+}
+
+
+
+
+
+
+/*商城購物島*/
+.home_bg6{
+  margin-bottom: 200px;
+}
+
+.home_bg6 .card-sm{
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  box-shadow: none;
+  filter: drop-shadow(1px 1px 2px rgba(0,0,0,.4));
+}
+
+.bg-monster-01{
+  background-image: url(../img/index-img/bg-monster-01.png);
+}
+.bg-monster-02{
+  background-image: url(../img/index-img/bg-monster-02.png);
+}
+.bg-monster-03{
+  background-image: url(../img/index-img/bg-monster-03.png);
+}
+.bg-monster-04{
+  background-image: url(../img/index-img/bg-monster-04.png);
+}
+
+.island_brown{
+  animation:monster_scale 3s infinite;
+}
+
+
+@keyframes monster_scale{
+  0%{transform:scale(1) translate(0px,0px);}
+  25%{transform:scale(1.1) translate(20px,0px);}
+  50%{transform:scale(1) translate(40px,0px);}
+  75%{transform:scale(1.1) translate(20px,0px);}
+  100%{transform:scale(1) translate(0px,0px);}
+}
+
+
+
+canvas {
+  display: inline-block;
+  position: absolute;
+  left: 25%;
+  width: 50vw;
+  height: 50vw;
+  margin: 0 auto;
+}
+
+
+
+
+@media screen and (max-width:767px){
+  .home_bg6{
+    margin-bottom: 100px;
+  }
+
+  .index_title6{
+    left: 0;
+  }
+
+  .island_shop{
+    width: 100%;
+    opacity: .9;
+  }
+
+  .island_brown{
+    left: 17%;
+    top: 26%;
+    width: 40%;
+  }
+
+
+  .card_game{
+  width: 70%;
+  }
+
+  .home_box6--item2 .container{
+    margin-bottom: 0;
+  }
+
+  canvas {
+  display: inline-block;
+  position: absolute;
+  left: 0%;
+  width: 100vw;
+  height: 100vw;
+  margin: 0 auto;
+  }
+}
+
+
+
+@keyframes bounceMon {
+    from,
+    
+    0%,
+    53%,
+    80%,
+    to {
+      -webkit-animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+      animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+      -webkit-transform: translate3d(0, 0, 0);
+      transform: translate3d(0, 0, 0);
+    }
+    20%,
+    23%,
+    40%,
+    43% {
+      -webkit-animation-timing-function: cubic-bezier(0.755, 0.05, 0.855, 0.06);
+      animation-timing-function: cubic-bezier(0.755, 0.05, 0.855, 0.06);
+      -webkit-transform: translate3d(0, -15px, 0);
+      transform: translate3d(0, -15px, 0);
+    }
+  
+    70% {
+      -webkit-animation-timing-function: cubic-bezier(0.755, 0.05, 0.855, 0.06);
+      animation-timing-function: cubic-bezier(0.755, 0.05, 0.855, 0.06);
+      -webkit-transform: translate3d(0, -11px, 0);
+      transform: translate3d(0, -11px, 0);
+    }
+  
+    90% {
+      -webkit-transform: translate3d(0, -6px, 0);
+      transform: translate3d(0, -6px, 0);
+    }
+    100% {
+      -webkit-transform: translate3d(0, 0, 0);
+      transform: translate3d(0, 0, 0);
+    }
+  }
+  
+  .bounceMon {
+    animation: bounceMon 0.5s;
+  }
+
+
+
+
+/*<!-- 地圖區域 -->*/
+.location_card{
+  background-color: #fff;
+  top:130%;
+  left:31%;
+  border-radius:10px;
+}
+
+.location_card{
+	background-color: #fff;
+	border-radius: 10px;
+	box-shadow: 2px 2px 2px 2px #CCC;
+}
+
+.googlemap{
+	mix-blend-mode:multiply;
+}
+
+
+
+@media screen and (max-width:767px){
+  .location_card{
+    display: block;
+    position: relative;
+  }
+
+  .home_box7{
+    display: block;
+  }
+
+  .location_card{
+    left: 0;
+    margin-left: 10px;
+    margin-bottom: 20px;
+  }
+
+  iframe{
+    display: none;
+  }
+
+}
+
+
+
+

@@ -1,0 +1,98 @@
+@mixin pbpercent($num) {
+    @for $i from 0 through $num {
+        .pb-#{$i}p {
+            padding-bottom: $i * 1%;
+        }
+    }
+}
+
+@mixin p($num) {
+    @for $i from 0 through $num {
+        .p-#{$i * 5} {
+            padding: $i * 5px;
+        }
+    }
+}
+
+@mixin ptpx($num) {
+    @for $i from -10 through $num {
+        .pt-#{$i * 5} {
+            padding-top: $i * 5px;
+        }
+    }
+}
+
+@mixin pbpx($num) {
+    @for $i from -10 through $num {
+        .pb-#{$i * 5} {
+            padding-bottom: $i * 5px;
+        }
+    }
+}
+
+@mixin plpx($num) {
+    @for $i from -10 through $num {
+        .pl-#{$i * 5} {
+            padding-left: $i * 5px;
+        }
+    }
+}
+
+@mixin prpx($num) {
+    @for $i from -10 through $num {
+        .pr-#{$i * 5} {
+            padding-right: $i * 5px;
+        }
+    }
+}
+
+
+
+
+@mixin pbpercent-size($size,$num) {
+    @for $i from 1 through $num {
+        .pb-#{$size}-#{$i}p {
+            padding-bottom: $i * 1%;
+        }
+    }
+}
+
+@mixin p-size($size,$num) {
+    @for $i from 0 through $num {
+        .p-#{$size}-#{$i * 5} {
+            padding: $i * 5px;
+        }
+    }
+}
+
+@mixin ptpx-size($size,$num) {
+    @for $i from -10 through $num {
+        .pt-#{$size}-#{$i * 5} {
+            padding-top: $i * 5px;
+        }
+    }
+}
+
+@mixin pbpx-size($size,$num) {
+    @for $i from -10 through $num {
+        .pb-#{$size}-#{$i * 5} {
+            padding-bottom: $i * 5px;
+        }
+    }
+}
+
+@mixin plpx-size($size,$num) {
+    @for $i from -10 through $num {
+        .pl-#{$size}-#{$i * 5} {
+            padding-left: $i * 5px;
+        }
+    }
+}
+
+@mixin prpx-size($size,$num) {
+    @for $i from -10 through $num {
+        .pr-#{$size}-#{$i * 5} {
+            padding-right: $i * 5px;
+        }
+    }
+}

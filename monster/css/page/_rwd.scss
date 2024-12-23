@@ -1,0 +1,26 @@
+$mobile : 767px;
+$medium-min: 768px;
+$desktop: 1200px;
+
+@mixin rwd($breakpoint) {
+    @if $breakpoint==mobile {
+
+        @media screen and (max-width: $mobile) {
+            @content;
+        }
+    }
+
+    @else if $breakpoint==medium {
+
+        @media screen and (min-width:$medium-min) {
+            @content;
+        }
+    }
+
+    @else if $breakpoint==desktop {
+        @media screen and (min-width: $desktop) {
+            @content;
+        }
+
+    }
+}

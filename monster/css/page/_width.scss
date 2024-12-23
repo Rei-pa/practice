@@ -1,0 +1,24 @@
+@mixin wpx($num) {
+    @for $i from 1 through $num {
+        .w-#{$i * 5} {width: $i * 5px;}
+    }
+}
+
+@mixin wpercent($num) {
+    @for $i from 1 through $num {
+        .w-#{$i}p { width: $i * 1%;}
+    }
+}
+
+@mixin wpx-size($size,$num) {
+    @for $i from 1 through $num {
+        .w-#{$size}-#{$i * 5} {width: $i * 5px;}
+    }
+}
+
+@mixin wpercent-size($size,$num) {
+    @for $i from 1 through $num {
+        .w-#{$size}-#{$i}p {width: $i * 1%;}
+    }
+}
+
