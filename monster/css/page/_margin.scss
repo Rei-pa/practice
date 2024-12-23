@@ -1,0 +1,87 @@
+.m-a{
+    margin: auto;
+}
+
+@mixin m($num) {
+    @for $i from 0 through $num {
+        .m-#{$i * 5} {
+            margin: $i * 5px;
+        }
+    }
+}
+
+@mixin mtpx($num) {
+    @for $i from -10 through $num {
+        .mt-#{$i * 5} {
+            margin-top: $i * 5px;
+        }
+    }
+}
+
+@mixin mbpx($num) {
+    @for $i from -10 through $num {
+        .mb-#{$i * 5} {
+            margin-bottom: $i * 5px;
+        }
+    }
+}
+
+@mixin mlpx($num) {
+    @for $i from -10 through $num {
+        .ml-#{$i * 5} {
+            margin-left: $i * 5px;
+        }
+    }
+}
+
+@mixin mrpx($num) {
+    @for $i from -10 through $num {
+        .mr-#{$i * 5} {
+            margin-right: $i * 5px;
+        }
+    }
+}
+
+
+
+
+
+@mixin m-size($size,$num) {
+    @for $i from 0 through $num {
+        .m-#{$size}-#{$i * 5} {
+            margin: $i * 5px;
+        }
+    }
+}
+
+@mixin mtpx-size($size,$num) {
+    @for $i from -10 through $num {
+        .mt-#{$size}-#{$i * 5} {
+            margin-top: $i * 5px;
+        }
+    }
+}
+
+@mixin mbpx-size($size,$num) {
+    @for $i from -10 through $num {
+        .mb-#{$size}-#{$i * 5} {
+            margin-bottom: $i * 5px;
+        }
+    }
+}
+
+@mixin mlpx-size($size,$num) {
+    @for $i from -10 through $num {
+        .ml-#{$size}-#{$i * 5} {
+            margin-left: $i * 5px;
+        }
+    }
+}
+
+@mixin mrpx-size($size,$num) {
+    @for $i from -10 through $num {
+        .mr-#{$size}-#{$i * 5} {
+            margin-right: $i * 5px;
+        }
+    }
+}

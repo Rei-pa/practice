@@ -1,0 +1,55 @@
+//注意要html 引入fontawesome
+//----- Popoup
+.popup__wrap {
+    width:100%;
+    height:100%;
+    display:none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background:rgba(0,0,0,0.6);
+  }
+  
+  .popup__box {
+    max-width:600px; //請注意自己的是否要調整
+    display: none;
+    transform:translate(-50%, -50%) scale(0.5);
+    position:fixed;
+    top:50%;
+    left:50%;
+    
+    .close-btn {
+      font-size: 30px;
+      color:#823c2d;
+      position:absolute;
+      top:10px;
+      right:10px;
+      cursor: pointer; 
+      &:hover{
+        color:#f09600;
+      }
+    }
+  }
+  
+  
+  .transform--in{
+    display:block;
+    -webkit-transition:all ease 0.5s;
+    transition:all ease 0.5s;
+  }
+  
+   .transform--out{
+      display:none;
+      -webkit-transition:all ease 0.5s;
+      transition:all ease 0.5s;
+    }
+  
+  .transform--in {
+      -webkit-transform:translate(-50%, -50%) scale(1);
+      transform:translate(-50%, -50%) scale(1);
+  }
+  
+  .transform--out {
+      -webkit-transform:translate(-50%, -50%) scale(0.5);
+      transform:translate(-50%, -50%) scale(0.5);
+  }

@@ -1,0 +1,14 @@
+@mixin h($num) {
+    @for $i from 0 through $num {
+        .h-#{$i}p {
+            height: $i * 1vh;
+        }
+    }
+}
+@mixin h-size($size,$num) {
+    @for $i from 0 through $num {
+        .h-#{$size}-#{$i}p {
+            height: $i * 1vh;
+        }
+    }
+}
