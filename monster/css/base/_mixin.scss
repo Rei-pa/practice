@@ -1,0 +1,238 @@
+//sun
+@mixin rotate($deg) {
+    -ms-transform: rotate($deg);
+    -webkit-transform: rotate($deg);
+    transform: rotate($deg);
+}
+
+@mixin animate($name, $seconds, $direction, $length) {
+    -webkit-animation: $name $seconds $direction $length;
+    -moz-animation: $name $seconds $direction $length;
+    animation: $name $seconds $direction $length;
+}
+
+@mixin eye-shape($height, $width, $radius) {
+    height: $height;
+    width: $width;
+    border-radius: $radius;
+}
+
+
+//projects
+@mixin object($fit:null, $positionX:null, $positionY:null) {
+    object-fit: $fit;
+    object-position: $positionX $positionY;
+}
+//在父層設定div寬度再將image帶入
+@mixin image($width:null) {
+    width:$width;
+    img{
+        width: 100%;
+        vertical-align: top;
+    }
+}
+//設定正方形圖片的RWD(不用先ps裁切圖片之方法)
+@mixin squareImage($width:null) {
+    width: $width;
+    padding-bottom: $width;
+    position: relative;
+    overflow: hidden;
+    img {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        vertical-align: top;
+        @include object(cover, center, center);
+    }
+}
+//自訂圖片長寬的RWD(不用先ps裁切圖片之方法)
+@mixin RWDimage($width:null, $pb:null) {
+    width: $width;
+    padding-bottom: $pb;
+    overflow: hidden;
+    position: relative;
+    img {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        vertical-align: top;
+        @include object(cover, center, center);
+    }
+}
+//RWD圓形圖片的方法
+@mixin circlePic($width) {
+    width: $width;
+    padding-bottom: $width;
+    border-radius: 50%;
+    overflow: hidden;
+    position: relative;
+    img{
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        vertical-align: top;
+        @include object(cover, center, center);
+    }    
+}
+//製作橫向list
+@mixin list($name, $display:null, $style:null) {
+    font-size: 0;
+    #{$name} {
+        display: $display;
+        list-style: $style;
+        a {
+            text-decoration: none;
+            cursor: pointer;
+        }
+    }
+}
+//float，在父層設定然後$name打子層名(ex:'.box')
+@mixin float($name, $float) {
+    #{$name} {
+        float: $float;
+    }
+    &:after {
+        content: '';
+        display: block;
+        clear: both;
+    }
+}
+//box-sizing搭配padding
+@mixin sizing($pl:null,$pt:null, $pr:null, $pb:null) {
+    box-sizing: border-box;
+    padding-top: $pt;
+    padding-bottom: $pb;
+    padding-left: $pl;
+    padding-right: $pr;
+}
+//position搭配tlbr
+@mixin position($p, $t:null, $l:null, $b:null, $r:null) {
+    position: $p;
+    top: $t;
+    bottom: $b;
+    left: $l;
+    right: $r;
+}
+//在父層下垂直置中(用偽物件加inline-block的方法)，$name放子層tagName或className
+@mixin centerInline($name, $innerFZ:null, $ta:null, $width:null) {
+    font-size: 0;
+    text-align: $ta;
+    width: $width;
+    #{$name} {
+        display: inline-block;
+        font-size: $innerFZ;
+    }
+    &:before {
+        content: '';
+        display: inline-block;
+        height: 100%;
+        width: 0;
+        vertical-align: middle;
+    }
+}
+//flex，$name放子層名
+@mixin flex($name, $jc:null, $ac:null, $as:null, $direction:null, $wrap:null) {
+    display: flex;
+    justify-content: $jc;
+    flex-flow: $direction $wrap;
+    align-content: $ac;
+    #{$name} {
+        align-self: $as;
+    }
+}
+//垂直置中translate用法
+@mixin centerTranslate($name) {
+    position: relative;
+    #{$name} {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+    }
+}
+//垂直置中Auto方法
+@mixin centerAbsolute($name) {
+    position: relative;
+    #{$name} {
+        position: absolute;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        margin: auto;
+    }
+}
+
+
+
+
+//class
+@mixin margincenter() {
+
+    //do
+    margin-left: auto;
+    margin-right: auto;
+    width: 100px;
+
+}
+@mixin fontSize($fontsize) {
+    font-size: $fontsize;
+    font-weight: bold;
+
+    h1 {
+
+        font-size: $fontsize * 5;
+    }
+}
+@mixin margin($width, $left, $right) {
+    width: $width;
+    margin-left: $left;
+    margin-right: $right;
+}
+@mixin margin1($width, $left, $right:30px) {
+    width: $width;
+    margin-left: $left;
+    margin-right: $right;
+}
+@mixin wow($fontsize:null, $color:null) {
+
+    font-size: $fontsize;
+    color: $color;
+}
+@mixin boxs($name, $width) {
+    #{$name} {
+        width: $width;
+    }
+    font-size: 0;
+}
+@mixin btn($colorName, $bgcolor, $borderradius:null, $width:null) {
+    .btn-#{$colorName} {
+        width: $width;
+        height: 30px;
+        text-align: center;
+        padding: 10px;
+        cursor: pointer;
+        background-color: $bgcolor;
+        @include margincenter();
+        @include fontSize (20px);
+        border-radius: $borderradius;
+        transition: .3s all ease-in-out;
+
+        //伪類
+        &:hover {
+            background-color: darken($bgcolor, 6%);
+        }
+    }
+}
+%box_wide {
+    width: 400px;
+    height: 130px;
+    background-color: rgb(40, 40, 40);
+    color: yellow;
+}

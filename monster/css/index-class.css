@@ -1,0 +1,360 @@
+ul {
+  padding: 0;
+}
+
+.class--carousel {
+  flex-flow: row wrap;
+  justify-content: center;
+  transition: 0.5s;
+}
+.class--carousel .class--doll, .class--carousel .class--print {
+  text-align: center;
+  float: none;
+  padding-bottom: 10px;
+  margin-bottom: 10px;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+  transition: 1s;
+}
+.class--carousel .class--doll a, .class--carousel .class--print a {
+  cursor: pointer;
+}
+.class--carousel .class--doll h3, .class--carousel .class--print h3 {
+  position: relative;
+  display: inline-block;
+  margin: auto;
+  transition: 0.5s;
+}
+.class--carousel .class--doll h3:hover, .class--carousel .class--print h3:hover {
+  color: #823c2d;
+  text-shadow: 1px 1px 3px rgba(172, 127, 69, 0.7450980392);
+  top: -3px;
+}
+.class--carousel .class--doll {
+  background-color: #c8cd5f;
+  box-shadow: 5px 3px 1px 0px #96c34b;
+  transform: rotateY(0deg);
+}
+.class--carousel .class--print {
+  background-color: #B9D6F2;
+  box-shadow: 5px 3px 1px 0px #2541B2;
+  position: absolute;
+  left: 0;
+  top: 0;
+  transform: rotateY(180deg);
+}
+.class--carousel .flip__wrap {
+  perspective: 2000px;
+  perspective-origin: center 50%;
+}
+
+.class__item--info .class__item--doll {
+  float: left;
+}
+.class__item--info:after {
+  content: "";
+  display: block;
+  clear: both;
+}
+.class__item--info .class__item--print {
+  float: left;
+}
+.class__item--info:after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+.class__intro {
+  text-align: left;
+  box-sizing: border-box;
+}
+.class__intro p {
+  margin-top: 0;
+}
+
+.class--price {
+  display: block;
+}
+
+.class__item--calendar {
+  background-color: rgba(255, 255, 255, 0.4);
+  border-radius: 20px;
+}
+
+.class__item--calendar table {
+  text-align: center;
+  margin: auto;
+  border-collapse: separate;
+  border-spacing: 5px;
+  color: #787878;
+}
+
+.week td {
+  width: 35px;
+  height: 35px;
+  font-size: 12px;
+  text-align: center;
+  position: relative;
+}
+.week td .days {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.title {
+  font-size: 14px;
+  line-height: 1;
+}
+
+.days {
+  display: block;
+  border-radius: 50%;
+  text-align: center;
+  letter-spacing: 0;
+}
+
+.class__item--calendar th {
+  position: relative;
+  height: 20px;
+}
+
+#titleYear {
+  height: 20px;
+}
+
+.title th {
+  padding: 0px 0px;
+  width: 30px;
+  height: 15px;
+  line-height: 2;
+}
+
+.timeBox {
+  font-size: 16px;
+}
+
+.arrow {
+  display: block;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  cursor: pointer;
+  transform: translate(-50%, -50%);
+  border-top: 10px solid transparent;
+  border-bottom: 10px solid transparent;
+}
+
+.arrow--left {
+  border-right: 20px solid #f09600;
+}
+
+.arrow--right {
+  border-left: 20px solid #f09600;
+}
+
+.selector {
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+.selector ul {
+  font-size: 0;
+  text-align: center;
+}
+.selector ul li {
+  display: inline-block;
+}
+.selector ul li img {
+  width: 100%;
+  vertical-align: top;
+  cursor: pointer;
+}
+.selector ul li:nth-child(1) {
+  margin-right: 20px;
+}
+.selector ul li:nth-child(2) {
+  margin-left: 20px;
+}
+
+#dollDate--secret, #printDate--secret {
+  display: none;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  width: 300px;
+  background-color: transparent;
+  color: #fff;
+}
+
+.days--doll.noShowClass--index {
+  background-color: rgba(120, 118, 17, 0.9);
+  color: rgba(25, 66, 32, 0.5);
+  border: 2px solid #FEFAE0;
+  cursor: default;
+}
+
+.days--print.noShowClass--index {
+  background-color: rgba(48, 78, 134, 0.9);
+  color: rgba(18, 31, 56, 0.9);
+  border: 2px solid #FEFAE0;
+  cursor: default;
+}
+
+@media screen and (max-width: 767px) {
+  .class__item--info {
+    padding: 10px 0px 0px 0px;
+  }
+  .class__intro {
+    width: 65%;
+    padding: 0px 0px 0px 10px;
+  }
+  .class__image {
+    width: 35%;
+    padding-bottom: 35%;
+    position: relative;
+    overflow: hidden;
+  }
+  .class__image img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    vertical-align: top;
+    -o-object-fit: cover;
+       object-fit: cover;
+    -o-object-position: center center;
+       object-position: center center;
+  }
+  .class--carousel {
+    flex-flow: row nowrap;
+    justify-content: space-around;
+    position: relative;
+    box-sizing: border-box;
+    padding: 0 20px;
+  }
+  .class--carousel .class--doll,
+  .class--carousel .class--print {
+    width: 100%;
+    margin: 10px 0px;
+    box-sizing: border-box;
+    padding: 10px 10px;
+  }
+  .selector ul li {
+    width: 25px;
+    height: 25px;
+  }
+  .class__item--calendar {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    padding-bottom: 10px;
+  }
+  .class__item--calendar table {
+    height: 350px;
+  }
+  .days {
+    width: 35px;
+    height: 35px;
+    line-height: 2.3;
+  }
+  .days--doll.showClass--index {
+    background-color: rgba(255, 255, 255, 0.8);
+    color: #787878;
+    border: 2px solid #79ae20;
+  }
+  .days--print.showClass--index {
+    background-color: rgba(255, 255, 255, 0.8);
+    color: #787878;
+    border: 2px solid #6079de;
+  }
+}
+@media screen and (min-width: 768px) {
+  .days--doll.showClass--index {
+    background-color: rgba(255, 255, 255, 0.8);
+    color: #787878;
+    border: 2px solid #79ae20;
+  }
+  .days--print.showClass--index {
+    background-color: rgba(255, 255, 255, 0.8);
+    color: #787878;
+    border: 2px solid #6079de;
+  }
+  .selector {
+    display: block;
+  }
+  .class--carousel {
+    width: 100%;
+    flex-flow: row nowrap;
+  }
+  .class__item--info {
+    min-height: 185px;
+    padding: 10px 20px 0px 20px;
+  }
+  .class__item--calendar {
+    margin: 0 20px;
+    padding-bottom: 10px;
+  }
+  .class__item--calendar table {
+    letter-spacing: 0;
+    height: 390px;
+  }
+  .class__image {
+    width: 45%;
+    padding-bottom: 45%;
+    position: relative;
+    overflow: hidden;
+  }
+  .class__image img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    vertical-align: top;
+    -o-object-fit: cover;
+       object-fit: cover;
+    -o-object-position: center center;
+       object-position: center center;
+  }
+  .class__intro {
+    width: 55%;
+    padding: 0px 0px 0px 10px;
+  }
+  .class--doll, .class--print {
+    max-width: 400px;
+    border-right: none;
+    border-left: none;
+  }
+  .days {
+    width: 35px;
+    height: 35px;
+    line-height: 2.3;
+  }
+  .selector ul li {
+    width: 40px;
+    height: 40px;
+  }
+}
+@media screen and (min-width: 992px) {
+  .title {
+    font-size: 16px;
+  }
+  .week td {
+    width: 40px;
+    height: 35px;
+    font-size: 14px;
+  }
+  .title th {
+    padding: 0px 5px;
+    width: 30px;
+    height: 15px;
+    line-height: 2;
+  }
+  .days {
+    width: 35px;
+    height: 35px;
+    line-height: 2.3;
+  }
+}/*# sourceMappingURL=index-class.css.map */

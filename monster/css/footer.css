@@ -1,0 +1,18 @@
+.footer_jj{
+    height: 100px;
+    background:url(../img/home_image/footer.png) center top;
+}
+.footer_jj p{
+    bottom: -70px;
+}
+
+/* @media screen and (max-width: 767px) { */
+    /* .footer_jj{ */
+        /* height: 30px; */
+        /* height: 65px; */
+    /* } */
+    /* .footer_jj p{ */
+        /* bottom: 2px; */
+        /* bottom: -20px; */
+    /* } */
+/* } */

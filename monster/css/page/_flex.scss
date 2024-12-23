@@ -1,0 +1,141 @@
+.fd-r{
+    flex-direction: row;
+}
+
+.fd-rr{
+    flex-direction: row-reverse;
+}
+
+.fd-c{
+    flex-direction: column;
+}
+
+.fd-cr{
+    flex-direction: column-reverse;
+}
+
+.fw-n{
+    flex-wrap: nowrap;
+}
+
+.fw-w{
+    flex-wrap: wrap;
+}
+
+.fw-wr{
+    flex-wrap: wrap-reverse;
+}
+
+.jc-fs{
+    justify-content: flex-start;
+}
+
+.jc-fe{
+    justify-content: flex-end;
+}
+
+.jc-c{
+    justify-content: center;
+}
+
+.jc-sb{
+    justify-content: space-between;
+}
+
+.jc-sa{
+    justify-content: space-around;
+}
+.jc-se{
+    justify-content: space-evenly;
+}
+
+.ai-fs{
+    align-items: flex-start;
+}
+
+.ai-fe{
+    align-items: flex-end;
+}
+
+.ai-c{
+    align-items: center;
+}
+
+.ai-s{
+    align-items: stretch; 
+}
+
+.ai-b{
+    align-items: baseline;
+}
+
+.ac-fs{
+    align-content: flex-start;
+}
+
+.ac-fe{
+    align-content: flex-end;
+}
+
+.ac-c{
+    align-content: center;
+}
+
+.ac-sa{
+    align-content: space-around;
+}
+
+.ac-sb{
+    align-content: space-between;
+}
+
+.ac-s{
+    align-content: stretch;
+}
+
+.as-a{
+    align-self: auto;
+}
+
+.as-s{
+    align-self: stretch;
+}
+
+.as-c{
+    align-self: center;
+}
+
+.as-fs{
+    align-self: flex-start;
+}
+
+.as-fe{
+    align-self: flex-end;
+}
+
+.as-b{
+    align-self: baseline;
+}
+@mixin flex-grow($num) {
+    @for $i from 1 through $num {
+        .fg-#{$i} {
+            flex-grow: $i;
+        }
+    }
+}
+
+@mixin flex-shrink($num) {
+    @for $i from 1 through $num {
+        .fs-#{$i} {
+            flex-shrink: $i;
+        }
+    }
+}
+
+@mixin order($num) {
+    @for $i from -1 through $num {
+        .order-#{$i} {
+            order: $i;
+        }
+    }
+}

@@ -1,0 +1,88 @@
+.po-r{
+    position: relative;
+}
+
+.po-a{
+    position: absolute;
+}
+
+.po-s{
+    position: sticky;
+}
+
+.po-f{
+    position: fixed;
+}
+
+
+@mixin t-size($size,$num) {
+    @for $i from 0 through $num {
+        .t-#{$size}-#{$i}p {
+            top: $i * 1%;
+        }
+    }
+}
+
+@mixin b-size($size,$num) {
+    @for $i from 0 through $num {
+        .b-#{$size}-#{$i}p {
+            bottom: $i * 1%;
+        }
+    }
+}
+
+@mixin l-size($size,$num) {
+    @for $i from 0 through $num {
+        .l-#{$size}-#{$i}p {
+            left: $i * 1%;
+        }
+    }
+}
+
+@mixin r-size($size,$num) {
+    @for $i from 0 through $num {
+        .r-#{$size}-#{$i}p {
+            right: $i * 1%;
+        }
+    }
+}
+
+@mixin t($num) {
+    @for $i from 0 through $num {
+        .t-#{$i}p {
+            top: $i * 1%;
+        }
+    }
+}
+
+@mixin b($num) {
+    @for $i from 0 through $num {
+        .b-#{$i}p {
+            bottom: $i * 1%;
+        }
+    }
+}
+
+@mixin l($num) {
+    @for $i from 0 through $num {
+        .l-#{$i}p {
+            left: $i * 1%;
+        }
+    }
+}
+
+@mixin r($num) {
+    @for $i from 0 through $num {
+        .r-#{$i}p {
+            right: $i * 1%;
+        }
+    }
+}
+
+@mixin z($num) {
+    @for $i from -1 through $num {
+        .z-#{$i} {
+            z-index: $i * 1;
+        }
+    }
+}
